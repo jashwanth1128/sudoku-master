@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game - Play Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>🎮 Sudoku Master</h1>
+            <p class="subtitle">Challenge your mind with the classic puzzle game</p>
+        </header>
+
+        <!-- Game Info Bar -->
+        <div class="info-bar">
+            <div class="info-item">
+                <span class="info-label">⏱️ Time:</span>
+                <span id="timer" class="info-value">00:00</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">❌ Mistakes:</span>
+                <span id="mistakes" class="info-value">0/3</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">📊 Difficulty:</span>
+                <span id="difficulty-display" class="info-value">Easy</span>
+            </div>
+        </div>
+
+        <!-- Settings Bar -->
+        <div class="settings-bar">
+            <button id="dark-mode-toggle" class="setting-btn" title="Toggle Dark Mode">
+                <span class="icon">🌙</span>
+            </button>
+            <button id="sound-toggle" class="setting-btn active" title="Toggle Sound">
+                <span class="icon">🔊</span>
+            </button>
+            <button id="hints-toggle" class="setting-btn active" title="Toggle Hints">
+                <span class="icon">💡</span>
+            </button>
+        </div>
+
+        <!-- Difficulty Selection -->
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+
+        <!-- Sudoku Grid -->
+        <div class="game-container">
+            <div id="sudoku-grid" class="sudoku-grid"></div>
+        </div>
+
+        <!-- Number Pad for Mobile -->
+        <div class="number-pad">
+            <button class="num-btn" data-num="1">1</button>
+            <button class="num-btn" data-num="2">2</button>
+            <button class="num-btn" data-num="3">3</button>
+            <button class="num-btn" data-num="4">4</button>
+            <button class="num-btn" data-num="5">5</button>
+            <button class="num-btn" data-num="6">6</button>
+            <button class="num-btn" data-num="7">7</button>
+            <button class="num-btn" data-num="8">8</button>
+            <button class="num-btn" data-num="9">9</button>
+            <button class="num-btn erase-btn" data-num="0">❌</button>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button id="new-game-btn" class="control-btn primary">🎲 New Game</button>
+            <button id="reset-btn" class="control-btn secondary">🔄 Reset</button>
+            <button id="check-btn" class="control-btn success">✓ Check</button>
+            <button id="solve-btn" class="control-btn warning">🤖 Solve</button>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Built with ❤️ | No libraries, pure vanilla JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">🎉</div>
+            <h2>Congratulations!</h2>
+            <p>You solved the puzzle!</p>
+            <p class="stats">Time: <span id="final-time"></span></p>
+            <p class="stats">Mistakes: <span id="final-mistakes"></span></p>
+            <button id="modal-new-game" class="control-btn primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
