@@ -1,11 +1,13 @@
-const CACHE_NAME = "sudoku-cache-v1";
+const CACHE_NAME = "sudoku-cache-v2";
 
 const urlsToCache = [
   "/",
   "/index.html",
   "/styles.css",
   "/script.js",
-  "/manifest.json"
+  "/manifest.json",
+  "/icon-192.png",
+  "/icon-512.png"
 ];
 
 self.addEventListener("install", event => {
@@ -13,6 +15,7 @@ self.addEventListener("install", event => {
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
   );
+  self.skipWaiting();
 });
 
 self.addEventListener("fetch", event => {
