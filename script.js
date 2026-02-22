@@ -578,3 +578,6 @@ class SudokuGame {
 document.addEventListener('DOMContentLoaded', () => {
     const game = new SudokuGame();
 });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
