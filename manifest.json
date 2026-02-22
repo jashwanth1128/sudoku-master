@@ -1,18 +1,21 @@
 {
   "name": "Sudoku Master",
   "short_name": "Sudoku",
-  "start_url": ".",
+  "description": "A classic Sudoku puzzle game with timer and difficulty levels.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#f0f4f8",
   "theme_color": "#4299e1",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://via.placeholder.com/512",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
